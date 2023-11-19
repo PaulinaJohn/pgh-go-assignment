@@ -10,9 +10,18 @@ import (
 func main() {
 	fmt.Println("Hello, 世界")
 	fmt.Println(gradeStudentSwitch(22))
-	fmt.Println(checkVowel("W"))
+	fmt.Println(checkVowel("O"))
 }
 
+// 1. Write a program that takes a student's score as input and converts it into a letter grade according to the following scale:
+
+// A: 90-100
+// B: 80-89
+// C: 70-79
+// D: 60-69
+// F: 0-59
+
+// Using if statements
 func gradeStudent(score int) string {
 	var grade string
 	if score >= 90 && score <= 100 {
@@ -30,6 +39,7 @@ func gradeStudent(score int) string {
 	return grade
 }
 
+// Using switch statements
 func gradeStudentSwitch(score int) string {
 	var grade string
 	switch {
@@ -47,6 +57,14 @@ func gradeStudentSwitch(score int) string {
 
 	return grade
 }
+
+// 2. Write a program that takes a year as input and determines whether it is a leap year or not.
+
+// func checkLeapYear(year int) Bool{
+// }
+
+//3. 3. Write a program that takes a single character as input and determines whether it is a vowel or a consonant.
+// Use if statements and boolean values to implement this vowel checker.
 
 func checkVowel(letter string) string {
 	letter = strings.ToLower(letter)
