@@ -11,6 +11,7 @@ func main() {
 	fmt.Println("Hello, 世界")
 	fmt.Println(gradeStudentSwitch(22))
 	fmt.Println(checkVowel("O"))
+	fmt.Println(checkTicketPrice(34))
 }
 
 // 1. Write a program that takes a student's score as input and converts it into a letter grade according to the following scale:
@@ -21,7 +22,6 @@ func main() {
 // D: 60-69
 // F: 0-59
 
-// Using if statements
 func gradeStudent(score int) string {
 	var grade string
 	if score >= 90 && score <= 100 {
@@ -39,7 +39,6 @@ func gradeStudent(score int) string {
 	return grade
 }
 
-// Using switch statements
 func gradeStudentSwitch(score int) string {
 	var grade string
 	switch {
@@ -79,4 +78,22 @@ func checkVowel(letter string) string {
 		}
 	}
 	return letterType
+}
+
+// 4. Write a Go program that takes a person's age as input and determines the ticket price for a movie theater based on the following rules:
+// Children (age <= 12): N5
+// Adults (age > 12 and age <= 64): N10
+// Seniors (age >= 65): N7
+
+func checkTicketPrice(age int) int {
+	var price int
+	if age <= 12 {
+		price = 5
+	} else if age > 12 && age <= 64 {
+		price = 10
+	} else {
+		price = 7
+	}
+
+	return price
 }
