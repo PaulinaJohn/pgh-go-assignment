@@ -2,11 +2,15 @@
 // Click here and start typing.
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"strings"
+)
 
 func main() {
 	fmt.Println("Hello, 世界")
 	fmt.Println(gradeStudentSwitch(22))
+	fmt.Println(checkVowel("W"))
 }
 
 func gradeStudent(score int) string {
@@ -42,4 +46,19 @@ func gradeStudentSwitch(score int) string {
 	}
 
 	return grade
+}
+
+func checkVowel(letter string) string {
+	letter = strings.ToLower(letter)
+	vowels := [5]string{"a", "e", "i", "o", "u"}
+	var letterType string
+	for i := 0; i < len(vowels); i++ {
+		if vowels[i] == letter {
+			letterType = "vowel"
+			break
+		} else {
+			letterType = "consonant"
+		}
+	}
+	return letterType
 }
